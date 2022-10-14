@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <title>Project Tracker</title>
 </head>
 <body>
@@ -16,16 +17,50 @@
         <div id="current-time">Time & Date</div>
     </nav>
 
-    <article class="instruction-container">
-        <div id="how-to-use">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<!-- get rid of this card container and use a card that just dissapears after clicking -->
+<section class="card-container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">How to use</h5>
+          <p class="card-text">This a project tracker application, the application allows you to track when the project should be finished.</p>
+          <a href="#" class="btn btn-primary">Start tracking</a>
         </div>
-    </article>
-    
+      </div>
+</section>                 
     <!-- <section include a form asking for users to fill in data, see README -->
+        <form class="form-container">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Name of project</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ex. Rock Paper Scissors">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Type of project</label>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select Option
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Hourly Wage</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ex $150/hr">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Due Date:</label>
+              <p>Date: <input type="text" id="datepicker"></p>
+            </div>
+          </form>
+
+
 
         <!-- <section include a bootsrap table so the project information can be printed to -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="./assets/script.js"></script>        
 </body>
 </html>
